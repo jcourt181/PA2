@@ -175,13 +175,9 @@ void run_client() {
         total_rtt += thread_data[i].total_rtt;
     }
 
-    printf("\n=== Statistics ===\n");
-    printf("Total Packets Sent: %ld\n", total_tx);
-    printf("Total ACKs Received: %ld\n", total_rx);
-    printf("Total Retransmissions: %ld\n", total_retry);
+    printf("\n=== Statistics ===\n");\
     printf("Total Packets Lost: %ld\n", total_lost);
-    printf("Packet Loss Rate: %.2f%%\n", (total_lost * 100.0) / total_tx);
-    printf("Retransmission Rate: %.2f%%\n", (total_retry * 100.0) / total_tx);
+    printf("Packet Loss Rate: %.2f%%\n", (total_lost * 100.0) / total_tx);\
     if (total_rx > 0) {
         printf("Average RTT: %.2f us\n", (double)total_rtt / total_rx);
     }
